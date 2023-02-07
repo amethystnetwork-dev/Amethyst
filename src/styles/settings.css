@@ -1,0 +1,38 @@
+.button {
+    background-color:#F08FFC;
+    border-radius:5px;
+    border: none !important;
+    width:100px;
+    margin-bottom:5px;
+    height:40px;
+  }
+  .button:hover,
+  .button:focus {
+    border-radius:5px;
+    background-color: #F080AC;
+  }
+  
+  .settings-head {
+    font-family:'Poppins';
+    font-size:36px;
+    color:mediumpurple;
+    padding:0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+  }
+  .settings-head2 {
+    font-family:'Poppins';
+    font-size:24px;
+    color:mediumpurple;
+  }
+  .dropdown {
+    font-family: 'Poppins';
+    background-color: #F08FFC;
+    width: 150px;
+    height:30px;
+    border-radius:5px;
+    border:none;
+  }
+  option {
+    font-family: 'Poppins';
+    border-radius:5px;
+  }

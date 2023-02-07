@@ -1,0 +1,41 @@
+import express from 'express';
+import createBareServer from '@tomphttp/bare-server-node';
+import { uvPath } from '@titaniumnetwork-dev/ultraviolet';
+import { fileURLToPath } from 'url'
+import path from 'node:path';
+import http from 'node:http';
+
+const bare = createBareServer('/bare/');
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const app = express();
+
+app.use(express.static('./dist'));
+
+app.use('/uv/', express.static(uvPath));
+
+app.use('/cdn', express.static('./games'));
+
+app.use((req, res) => {
+    res.status(404);
+    res.sendFile(path.join(__dirname, '/dist/index.html'));
+});
+
+
+const server = http.createServer();
+
+server.on("request", (req, res) => {
+    if(bare.shouldRoute(req)) return bare.routeRequest(req, res);
+    app(req, res);
+});
+
+server.on("upgrade", (req, socket, head) => {
+    if(bare.shouldRoute(req)) return bare.routeUpgrade(req, socket, head);
+    socket.end();
+});
+
+server.on("listening", () => {
+  const address = server.address();
+  console.log(`Listening on port ${address.port}`);
+});
+
+server.listen({ port: (process.env.PORT || 8080) });
