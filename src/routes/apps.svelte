@@ -25,7 +25,9 @@
             <h1 class="head">Apps</h1>
         </div>
         <div id="apps-container">
-            {#await getApps() then json}
+            {#await getApps()}
+                <h3>Loading</h3>
+            {:then json}
                 {#each json as i}
                     <GameItem
                         title={i.title}
@@ -34,6 +36,9 @@
                         click={loadAppFrame}
                     />
                 {/each}
+            {:catch err}
+                <h3>Failed to load.</h3>
+                <p>{err}</p>
             {/await}
         </div>
     </div>

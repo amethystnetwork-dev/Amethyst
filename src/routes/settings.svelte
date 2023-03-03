@@ -50,9 +50,9 @@
     <br />
     <h2 class="settings-head2">Search engine</h2>
     <select class="dropdown" on:change={changeSearch} bind:value={searchEngine}>
-        <option>DuckDuckGo</option>
-        <option>Brave</option>
-        <option>Google</option>
+        <option value="ddg">DuckDuckGo</option>
+        <option value="brave">Brave</option>
+        <option value="google">Google</option>
     </select>
 </div>
 <!-- <Ad client="" slot=""></Ad> -->

@@ -8,7 +8,7 @@
 <div id="access">
     <nav id="access-nav">
         <!-- svelte-ignore a11y-click-events-have-key-events -->
-        <i class="fa-solid fa-arrow-left" on:click={(event) => {
+        <i class="fa-solid fa-arrow-left exit" on:click={(event) => {
             src = "about:blank";
             emit('exit', event);
         }} />
@@ -29,6 +29,9 @@
         flex-direction: column;
         width: 100%;
         height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
     }
 
     #access #access-nav {
@@ -40,6 +43,9 @@
     }
 
     #access-nav span {
+        color: white;
+    }
+    .exit {
         color: white;
     }
 </style>

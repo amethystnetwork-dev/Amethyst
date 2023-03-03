@@ -3,6 +3,8 @@ import './styles/games.css';
 import './styles/settings.css';
 import './styles/search.css';
 
+import './styles/themes.css';
+
 import '@fortawesome/fontawesome-free/css/all.css';
 
 import App from './App.svelte';

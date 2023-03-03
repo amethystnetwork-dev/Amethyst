@@ -27,7 +27,9 @@
       <h1 class="head">Games</h1>
     </div>
     <div id="gs-container">
-      {#await getGames() then json}
+      {#await getGames()}
+        <h3>Loading</h3>
+      {:then json}
         {#each json as i}
           <GameItem
             title={i.title}
@@ -36,6 +38,9 @@
             click={loadGameFrame}
           />
         {/each}
+        {:catch err} 
+          <h3>Failed to load</h3>
+          <p>{err}</p>
       {/await}
     </div>
   </div>

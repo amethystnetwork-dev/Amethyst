@@ -12,30 +12,27 @@
     showingFrame = true;
   }
 
-  function go() {
+  function go(i) {
+    const url = i || input;
     switch (localStorage.getItem("amethyst||px")) {
-      case "Ultraviolet":
-        loadFrame(`./load.html#${btoa(input)}`);
-        break;
       case "Corrosion":
         if (!isUrl(input))
-          return loadFrame(`https://www.google.com/search?q=${input}`);
-        loadFrame(`/corrosion/gateway?url=${input}`);
+          return loadFrame(`https://www.google.com/search?q=${url}`);
+        loadFrame(`/corrosion/gateway?url=${url}`);
         break;
+      case "Ultraviolet":
+        loadFrame(`./load.html#${btoa(url)}`);
       default:
-        loadFrame(`./load.html#${btoa(input)}`);
-        break;
+      case "Ultraviolet":
+        loadFrame(`./load.html#${btoa(url)}`);
     }
   }
 
   function isUrl(val = "") {
-    if (
-      /^http(s?):\/\//.test(val) ||
-      (val.includes(".") && val.substr(0, 1) !== " ")
-    )
-      return true;
-    return false;
+    return (/^http(s?):\/\//.test(val) || (val.includes(".") && val.substr(0, 1) !== " ")) ? true : false;
   }
+
+  var sugg = [];
 </script>
 
 <Head></Head>
@@ -46,7 +43,10 @@
       <img src="/img/logo.png" class="nav-logo" alt="Amethyst Logo" />
       <h1 class="head">Amethyst</h1>
     </div>
-    <form id="searchform" on:submit|preventDefault={go}>
+    <form id="searchform" on:submit|preventDefault={() => go()}>
+      <button type="submit" class="submit-button"
+      ><i class="fas fa-search searchicon" /></button
+    >
       <!-- svelte-ignore a11y-autofocus -->
       <input
         autofocus
@@ -56,10 +56,16 @@
         placeholder="Search or Type URL"
         bind:value={input}
       />
-      <button type="submit" class="submit-button"
-        ><i class="fas fa-search searchicon" /></button
-      >
     </form>
+    <div class="suggestions">
+      {#each sugg as item, i}
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <div
+        class="sugg"
+        on:click={(e) => go(e.target.textContent)}
+      >{item}</div>
+      {/each}
+    </div>
   </div>
 
   <!-- <Ad client="" slot=""></Ad> -->
@@ -68,4 +74,23 @@
 {/if}
 
 <style>
+.suggestions {
+  width: 584px;
+  height: auto;
+  background: var(--highlight);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  font-size: large;
+  margin: 0 10px;
+  z-index: 1;
+  max-width: calc(100vh - 10px);
+  display: none;
+}
+
+.sugg {
+  padding: 5px;
+  padding-left: 10px;
+  cursor: pointer;
+  color: var(--text-contrast);
+  overflow: hidden;
+}
 </style>

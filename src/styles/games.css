@@ -1,13 +1,12 @@
 .box {
     width: 350px;
     height: 100px;
-    background-image: linear-gradient(to right, #242424, #2e2e2e);
-    border-image: linear-gradient(to right, green, blue);
+    background-color: var(--box);
     border-radius: 10px;
     display: flex;
     float: left;
     margin-left: 30px;
-    box-shadow: #242424 2px;
+    box-shadow: var(--box) 2px;
   margin-bottom:5px;
 }
 .b2 {

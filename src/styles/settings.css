@@ -1,5 +1,5 @@
 .button {
-    background-color:#F08FFC;
+    background-color:var(--button);
     border-radius:5px;
     border: none !important;
     width:100px;
@@ -8,25 +8,25 @@
   }
   .button:hover,
   .button:focus {
-    border-radius:5px;
-    background-color: #F080AC;
+    border-radius: 5px;
+    background-color: var(--button-hover);
   }
   
   .settings-head {
-    font-family:'Poppins';
-    font-size:36px;
-    color:mediumpurple;
+    font-family: 'Poppins';
+    font-size: 36px;
+    color: var(--header);
     padding:0px 0px 0px 0px;
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0spx 0px;
   }
   .settings-head2 {
-    font-family:'Poppins';
-    font-size:24px;
-    color:mediumpurple;
+    font-family: 'Poppins';
+    font-size: 24px;
+    color: var(--header);
   }
   .dropdown {
     font-family: 'Poppins';
-    background-color: #F08FFC;
+    background-color: var(--button);
     width: 150px;
     height:30px;
     border-radius:5px;

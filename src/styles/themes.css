@@ -1,0 +1,13 @@
+body {
+    --background: linear-gradient(to right, #db5dfd, #bf83fb);
+    --theme-i: #824dff;
+    --sidebar-bg: #f3f3f3;
+    --dark-text: #353535;
+    --color-one: #c48aff;
+    --color-two: #9c38ff;
+    --white: white;
+    --box: #242424;
+    --header: #3f12f3;
+    --button: #F08FFC;
+    --button-hover: #F080AC;
+}

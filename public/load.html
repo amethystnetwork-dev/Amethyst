@@ -93,18 +93,14 @@
                     case 'google':
                         search = 'https://google.com/search?q='
                         break;
-                    case 'ddg':
-                        search = 'https://duckduckgo.com/?q='
-                        break;
-                    case 'bing':
-                        search = 'https://bing.com/search?q='
-                        break;
                     case 'brave':
                         search = 'https://search.brave.com/search?q='
                         break;
                     default:
-                        localStorage.setItem('incog||search', 'ddg')
+                        localStorage.setItem('amethyst||search', 'ddg');
+                    case 'ddg':
                         search = 'https://duckduckgo.com/?q='
+                        break;
                 };
                 if (url) {
                     if (!isUrl(url)) url = search + url;

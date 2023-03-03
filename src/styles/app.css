@@ -21,7 +21,7 @@ height: 100%
 .head {
   font-family:'Poppins';
   font-size:36px;
-  color: #3f12f3;
+  color: var(--header);
   width:100%;
   text-align:center;
 }
@@ -41,15 +41,15 @@ html {
 }
 
 :root {
-  --accent-color: #fff;
-  --gradient-color: #FBFBFB;
+  --accent-color: var(--white);
+  --gradient-color: var(--white);
 }
 body{
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  background-image: linear-gradient(to right, #db5dfd, #bf83fb);
+  background-image: var(--background);
 }
 .alignment-container-1 {
   height:100%;
@@ -59,11 +59,11 @@ body{
   align-items: center;
 }
 .i1 {
-  background-color: #824dff;
+  background-color: var(--theme-i);
   border-radius: 12px;
   border: 0;
   box-sizing: border-box;
-  color: #eee;
+  color: var(--white);
   font-size: 18px;
   height: 50px;
   outline: 0;
@@ -82,16 +82,16 @@ body{
   width: 240px;
   left: -240px;
   height: 100%;
-  background-color: #f3f3f3;
+  background-color: var(--sidebar-bg);
   transition: all .5s ease;
   z-index:4;
 }
 .sidebar .nav-header {
   font-size: 28px;
-  color: #353535;
+  color: var(--dark-text);
   line-height: 70px;
   text-align: center;
-  background-color: #f3f3f3;
+  background-color: var(--sidebar-bg);
   user-select: none;
   font-family: 'Lato', sans-serif;
 }
@@ -100,7 +100,7 @@ body{
   margin:auto;
   height: 65px;
   width: 100%;
-  color: #353535;
+  color: var(--dark-text);
   line-height: 65px;
   padding-left: 30px;
   box-sizing: border-box;
@@ -110,7 +110,7 @@ body{
 }
 a.active,a:hover{
   border-left: 5px solid var(--accent-color);
-  color: #fff;
+  color: var(--white);
    background: linear-gradient(to left, var(--accent-color), var(--gradient-color));
 }
 .sidebar a i {
@@ -131,11 +131,11 @@ label #btn,label #cancel {
   position: absolute;
   left: 5px;
   cursor: pointer;
-  color: #c48aff;
+  color: var(--color-one);
   border-radius: 5px;
   margin: 15px 30px;
   font-size: 29px;
-  background-color: #9c38ff;
+  background-color: var(--color-two);
   height: 45px;
   width: 45px;
   text-align: center;
