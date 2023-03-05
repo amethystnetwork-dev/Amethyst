@@ -11,8 +11,8 @@
     const changePx = (event) => localStorage.setItem("amethyst||px", event.target.value);
 
     function setNavLayout(type) {
+        document.body.setAttribute('data-navbar', type);
         localStorage.setItem("amethyst||navLayout", type);
-        alert("This is kinda finished");
     }
 
     function goBlank() {
