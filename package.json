@@ -1,6 +1,6 @@
 {
   "name": "amethyst",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "A web proxy site using Ultraviolet and Corrosion",
   "type": "module",
   "scripts": {
@@ -19,7 +19,7 @@
     "url": "https://github.com/amethystnetwork-dev/Amethyst/issues"
   },
   "homepage": "https://github.com/amethystnetwork-dev/Amethyst#readme",
-   "engines": {
+  "engines": {
     "npm": ">=8.0.0",
     "node": ">=18.0.0"
   },
@@ -33,6 +33,7 @@
   "dependencies": {
     "@titaniumnetwork-dev/ultraviolet": "^1.0.8-beta",
     "@tomphttp/bare-server-node": "^1.2.3",
+    "corrosion": "github:titaniumnetwork-dev/Corrosion",
     "express": "^4.18.2"
   }
 }

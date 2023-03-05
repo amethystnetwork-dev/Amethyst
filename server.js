@@ -1,4 +1,5 @@
 import express from 'express';
+import Corrosion from 'corrosion';
 import createBareServer from '@tomphttp/bare-server-node';
 import { uvPath } from '@titaniumnetwork-dev/ultraviolet';
 import { fileURLToPath } from 'url'
@@ -6,6 +7,11 @@ import path from 'node:path';
 import http from 'node:http';
 
 const bare = createBareServer('/bare/');
+const corrosion = new Corrosion({
+    codec: 'xor',
+    prefix: '/corrosion/',
+    title: 'Amethyst'
+});
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 
@@ -20,16 +26,17 @@ app.use((req, res) => {
     res.sendFile(path.join(__dirname, '/dist/index.html'));
 });
 
-
 const server = http.createServer();
 
 server.on("request", (req, res) => {
     if(bare.shouldRoute(req)) return bare.routeRequest(req, res);
+    if(req.url.startsWith(corrosion.prefix)) return corrosion.request(req, res);
     app(req, res);
 });
 
 server.on("upgrade", (req, socket, head) => {
     if(bare.shouldRoute(req)) return bare.routeUpgrade(req, socket, head);
+    if(req.url.startsWith(corrosion.prefix)) return corrosion.upgrade(req, socket, head);
     socket.end();
 });
 

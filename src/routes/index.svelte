@@ -1,7 +1,12 @@
 <script>
+  import { createEventDispatcher } from "svelte";
+
   import Frame from "../components/frame.svelte";
   import Head from "../components/head.svelte";
   import Ad from "../components/ad.svelte";
+  import AlienHub from "../components/AlienHub.svelte";
+
+  const emit = createEventDispatcher();
 
   let input = "";
   let showingFrame = false;
@@ -14,14 +19,14 @@
 
   function go(i) {
     const url = i || input;
+    if(!url) return;
+    emit("navhide");
     switch (localStorage.getItem("amethyst||px")) {
       case "Corrosion":
         if (!isUrl(input))
           return loadFrame(`https://www.google.com/search?q=${url}`);
         loadFrame(`/corrosion/gateway?url=${url}`);
         break;
-      case "Ultraviolet":
-        loadFrame(`./load.html#${btoa(url)}`);
       default:
       case "Ultraviolet":
         loadFrame(`./load.html#${btoa(url)}`);
@@ -32,12 +37,16 @@
     return (/^http(s?):\/\//.test(val) || (val.includes(".") && val.substr(0, 1) !== " ")) ? true : false;
   }
 
+  function goSugg(event) {
+    go(event.target.textContent);
+  }
   var sugg = [];
 </script>
 
 <Head></Head>
 
 {#if !showingFrame}
+  <AlienHub />
   <div class="alignment-container-1">
     <div class="header-container">
       <img src="/img/logo.png" class="nav-logo" alt="Amethyst Logo" />
@@ -62,7 +71,7 @@
       <!-- svelte-ignore a11y-click-events-have-key-events -->
       <div
         class="sugg"
-        on:click={(e) => go(e.target.textContent)}
+        on:click={goSugg}
       >{item}</div>
       {/each}
     </div>

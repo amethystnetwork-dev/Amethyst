@@ -1,14 +1,14 @@
 <script>
     import { Link } from "svelte-routing";
+    export let checked = false;
 
     function getProps({ isCurrent }) {
-        if(isCurrent) return { class: "active" };
-        return {};
+        return (isCurrent ? { class: "active" } : {});
     }
 </script>
 
 <nav>
-    <input type="checkbox" id="check" />
+    <input type="checkbox" id="check" bind:checked={checked} />
     <label for="check">
         <i class="fa-solid fa-bars fa-2xl" id="btn" />
         <i class="fa-solid fa-bars fa-2xl" id="cancel" />

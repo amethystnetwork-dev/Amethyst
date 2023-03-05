@@ -14,7 +14,7 @@
         }} />
         <span id="access-title" />
     </nav>
-    <iframe id="access-frame" title="Access Frame" src={src} />
+    <iframe id="access-frame" title="Access Frame" frameborder="0" src={src} />
 </div>
 
 <style>

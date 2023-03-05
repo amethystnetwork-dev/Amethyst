@@ -1,12 +1,17 @@
 <script>
+    import { createEventDispatcher } from "svelte";
+
     import Frame from "../components/frame.svelte";
     import GameItem from "../components/gameItem.svelte";
     import Head from "../components/head.svelte";
+
+    const emit = createEventDispatcher();
 
     var showingFrame = false;
     var frameSrc = "about:blank";
 
     function loadAppFrame(loc) {
+        emit("navhide");
         showingFrame = true;
         frameSrc = loc;
     }
