@@ -7,12 +7,10 @@ const buildURL = new URL("./dist/", import.meta.url);
 const indexURL = new URL("index.html", buildURL);
 
 const paths = [
-    'apps',
-    'games',
-    'credits',
-    'settings',
-    // for static file hosts
-    '404'
+  "apps",
+  "games",
+  "credits",
+  "settings"
 ];
 
 for (const path of paths) {
