@@ -4,6 +4,7 @@
     import Frame from "../components/frame.svelte";
     import GameItem from "../components/gameItem.svelte";
     import Head from "../components/head.svelte";
+    import resolveProxy from "../lib/resolveProxy";
 
     const emit = createEventDispatcher();
 
@@ -13,7 +14,7 @@
     function loadAppFrame(loc) {
         emit("navhide");
         showingFrame = true;
-        frameSrc = loc;
+        frameSrc = resolveProxy(loc);
     }
 
     async function getApps() {
@@ -22,7 +23,7 @@
         return json;
     }
 </script>
-<Head defaultTitle="Amethyst | Apps"></Head>
+<Head localTitle="Amethyst | Apps" />
 
 {#if !showingFrame}
     <div class="alignment-container-1">

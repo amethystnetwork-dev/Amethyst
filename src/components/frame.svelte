@@ -10,7 +10,7 @@
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <i class="fa-solid fa-arrow-left exit" on:click={(event) => {
             src = "about:blank";
-            emit('exit', event);
+            emit("exit", event);
         }} />
         <span id="access-title" />
     </nav>
@@ -18,11 +18,14 @@
 </div>
 
 <style>
+    
     #access-frame {
         width: 100%;
         height: 90%;
         min-height: 95vh;
         display: block;
+        position: absolute;
+        bottom: 0px;
     }
 
     #access {
@@ -48,4 +51,17 @@
     .exit {
         color: white;
     }
+
+    /* Frame */
+.frame-container {
+position: fixed;
+top: 60px; 
+left: 0; 
+right: 0; 
+bottom: 0;
+border: none;
+display: none;
+width: 100%;
+height: 100%
+}
 </style>

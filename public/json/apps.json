@@ -1,22 +1,32 @@
 [
   {
     "img": "/img/apps/youtube.jpg",
-    "location": "/load.html#aHR0cHM6Ly95b3V0dWJlLmNvbQ==",
+    "location": "https://youtube.com",
     "title": "Youtube"
   },
   {
     "img": "/img/apps/spotify.jpg",
-    "location": "/load.html#aHR0cHM6Ly9zcG90aWZ5LmNvbQ==",
+    "location": "https://spotify.com",
     "title": "Spotify"
   },
   {
+    "img": "/img/apps/reddit.png",
+    "location": "https://reddit.com",
+    "title": "Reddit"
+  },
+  {
     "img": "/img/apps/discord.jpg",
-    "location": "/load.html#aHR0cHM6Ly9kaXNjb3JkLmNvbQ==",
+    "location": "https://discord.com/app",
     "title": "Discord"
   },
   {
+    "img": "/img/apps/y8.png",
+    "location": "https://www.y8.com",
+    "title": "Y8"
+  },
+  {
     "img": "/img/apps/vsc.png",
-    "location": "/load.html#aHR0cHM6Ly92c2NvZGUuZGV2",
+    "location": "https://vscode.dev",
     "title": "VS Code"
   }
 ]

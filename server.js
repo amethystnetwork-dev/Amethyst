@@ -1,4 +1,6 @@
-import express from 'express';
+import createApplication from 'express';
+import serveIndex from 'serve-index';
+import serveStatic from 'serve-static';
 import Corrosion from 'corrosion';
 import createBareServer from '@tomphttp/bare-server-node';
 import { uvPath } from '@titaniumnetwork-dev/ultraviolet';
@@ -13,13 +15,13 @@ const corrosion = new Corrosion({
     title: 'Amethyst'
 });
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const app = express();
+const app = createApplication();
 
-app.use(express.static('./dist'));
+app.use(serveStatic('./dist'));
 
-app.use('/uv/', express.static(uvPath));
+app.use('/uv/', serveStatic(uvPath));
 
-app.use('/cdn', express.static('./games'));
+app.use('/cdn', serveStatic('./gsource'), serveIndex('./gsource', { icons: true }));
 
 app.use((req, res) => {
     res.status(404);

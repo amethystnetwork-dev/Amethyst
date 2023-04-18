@@ -4,6 +4,7 @@
   import Frame from "../components/frame.svelte";
   import GameItem from "../components/gameItem.svelte";
   import Head from "../components/head.svelte";
+  import resolveProxy from "../lib/resolveProxy";
   import Ad from "../components/ad.svelte";
   
   const emit = createEventDispatcher();
@@ -14,17 +15,18 @@
   function loadGameFrame(loc) {
     emit("navhide");
     showingFrame = true;
-    frameSrc = loc;
+    if(loc.startsWith("/") && !loc.startsWith("//")) return frameSrc = loc;
+    frameSrc = resolveProxy(loc);
   }
 
   async function getGames() {
-    const res = await fetch("/json/gs.json");
+    const res = await fetch("/cdn/gs.json");
     const json = await res.json();
     return json;
   }
 </script>
 
-<Head defaultTitle="Amethyst | Games"></Head>
+<Head localTitle="Amethyst | Games"></Head>
 
 {#if !showingFrame}
   <div class="alignment-container-1">

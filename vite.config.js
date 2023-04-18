@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
 
-import express from 'express';
+import serveStatic from 'serve-static';
+import serveIndex from 'serve-index';
 
 import createBareServer from '@tomphttp/bare-server-node';
 import { uvPath } from '@titaniumnetwork-dev/ultraviolet';
@@ -26,8 +27,9 @@ const setupProxy = {
       if(req.url.startsWith(corrosion.prefix)) corrosion.request(req, res); else next();
     });
 
-    server.middlewares.use('/cdn/', express.static("./games/"));
-    return () => server.middlewares.use('/uv/', express.static(uvPath));
+    server.middlewares.use('/cdn/', serveStatic('./gsource/'));
+    server.middlewares.use('/cdn/', serveIndex('./gsource/', { icons: true }));
+    return () => server.middlewares.use('/uv/', serveStatic(uvPath));
   }
 };
 

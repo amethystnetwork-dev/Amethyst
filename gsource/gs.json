@@ -1,0 +1,32 @@
+[
+  {
+    "img": "/img/gs/krk.png",
+    "location": "https://krunker.io",
+    "title": "Krunker"
+  },
+  {
+    "img": "/img/gs/1v1lol.png",
+    "location": "https://1v1.lol",
+    "title": "1v1.lol"
+  },
+  {
+    "img": "/img/gs/vex6.jpeg",
+    "location": "/cdn/",
+    "title": "Vex 6"
+  },
+  {
+    "img": "/img/gs/slope.jpg",
+    "location": "https://www.y8.com/games/slope",
+    "title": "Slope"
+  },
+  {
+    "img": "/img/gs/diep.webp",
+    "location": "https://diep.io",
+    "title": "Diep.io"
+  },
+  {
+    "img": "/img/gs/cookie-clicker.png",
+    "location": "https://orteil.dashnet.org/cookieclicker/",
+    "title": "Cookie Clicker"
+  }
+]

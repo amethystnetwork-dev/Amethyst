@@ -2,7 +2,7 @@
     import { Link } from "svelte-routing";
     import Head from "../components/head.svelte";
 </script>
-<Head defaultTitle="Amethyst | 404"></Head>
+<Head localTitle="Amethyst | 404" />
 
 <div class="alignment-container-1">
     <h1>Error 404</h1>

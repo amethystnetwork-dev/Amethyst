@@ -1,4 +1,4 @@
-body {
+body[data-theme="default"] {
     --background: linear-gradient(to right, #db5dfd, #bf83fb);
     --theme-i: #824dff;
     --sidebar-bg: #f3f3f3;

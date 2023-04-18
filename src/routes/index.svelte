@@ -3,50 +3,44 @@
 
   import Frame from "../components/frame.svelte";
   import Head from "../components/head.svelte";
+  import resolveProxy from "../lib/resolveProxy";
   import Ad from "../components/ad.svelte";
   import AlienHub from "../components/AlienHub.svelte";
+  import bare from "../lib/BareClient";
 
   const emit = createEventDispatcher();
 
   let input = "";
   let showingFrame = false;
   let frameSrc = "about:blank";
-
-  function loadFrame(url) {
-    frameSrc = url;
-    showingFrame = true;
-  }
+  var sugg = [];
 
   function go(i) {
-    const url = i || input;
-    if(!url) return;
+    sugg = [];
     emit("navhide");
-    switch (localStorage.getItem("amethyst||px")) {
-      case "Corrosion":
-        if (!isUrl(input))
-          return loadFrame(`https://www.google.com/search?q=${url}`);
-        loadFrame(`/corrosion/gateway?url=${url}`);
-        break;
-      default:
-      case "Ultraviolet":
-        loadFrame(`./load.html#${btoa(url)}`);
-    }
+    showingFrame = true;
+    frameSrc = resolveProxy(i || input, localStorage.getItem("amethyst||px"));
   }
 
-  function isUrl(val = "") {
-    return (/^http(s?):\/\//.test(val) || (val.includes(".") && val.substr(0, 1) !== " ")) ? true : false;
+  async function keydown(event) {
+    const query = event.target.value;
+    if(!query) return sugg = [];
+    const res = await bare.fetch("https://duckduckgo.com/ac/?q=" + query + "&type=list");
+    const json = await res.json();
+    sugg = json[1];
   }
 
   function goSugg(event) {
     go(event.target.textContent);
   }
-  var sugg = [];
 </script>
 
 <Head></Head>
 
 {#if !showingFrame}
-  <AlienHub />
+  {#if !import.meta.env.DISABLE_ALIENHUB}
+      <AlienHub on:click={e => go(e.detail)} />
+    {/if}
   <div class="alignment-container-1">
     <div class="header-container">
       <img src="/img/logo.png" class="nav-logo" alt="Amethyst Logo" />
@@ -58,6 +52,7 @@
     >
       <!-- svelte-ignore a11y-autofocus -->
       <input
+        on:input={keydown}
         autofocus
         autocomplete="off"
         class="search"
@@ -92,7 +87,6 @@
   margin: 0 10px;
   z-index: 1;
   max-width: calc(100vh - 10px);
-  display: none;
 }
 
 .sugg {

@@ -140,7 +140,8 @@
     </div>
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('./uv/sw.js', { scope: __uv$config.prefix }).then(() => {
+            navigator.serviceWorker.getRegistration('./uv/sw.js').then(async worker => {
+                if(!worker) await navigator.serviceWorker.register('./uv/sw.js', { scope: __uv$config.prefix });
                 let url = atob(decodeURIComponent(window.location.hash.slice(1)));
                 let search;
                 switch (localStorage.getItem('amethyst||search')) {
@@ -163,7 +164,7 @@
                 window.location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
             });
         } else {
-            document.querySelector('.lds-dual-ring').remove();
+            document.querySelector('.lds-grid').remove();
             document.querySelector('.info').textContent = 'Your browser does not support service workers or is blocking them (private browsing mode?). Try swapping or updating your browser.'
         };
 
