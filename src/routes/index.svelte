@@ -38,9 +38,6 @@
 <Head></Head>
 
 {#if !showingFrame}
-  {#if !import.meta.env.DISABLE_ALIENHUB}
-      <AlienHub on:click={e => go(e.detail)} />
-    {/if}
   <div class="alignment-container-1">
     <div class="header-container">
       <img src="/img/logo.png" class="nav-logo" alt="Amethyst Logo" />
