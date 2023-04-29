@@ -28,16 +28,16 @@ body[data-theme="dark-mode"] {
     --font-family: ariel;
 }
 body[data-theme="model-red"] {
-    --background:linear-gradient(to right, #a21515, #470000);
+    --background:linear-gradient(to right, #342b36, #000000);
     --theme-i: #b80000;
     --sidebar-bg: #1d1d1d;
     --dark-text: white;
-    --color-one: #ff0000;
-    --color-two: #ff8f8f;
+    --color-one: #9c38ff;
+    --color-two: #c48aff;
     --white: #242424;
     --box: #353535;
-    --header: #000000;
-    --button: #000000;
-    --button-hover: #ff0000;
+    --header: #824dff;
+    --button: #F08FFC;
+    --button-hover: #F080AC;
     --font-family: ariel;
 }
