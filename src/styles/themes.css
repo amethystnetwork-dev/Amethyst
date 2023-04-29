@@ -42,3 +42,6 @@ body[data-theme="model-red"] {
     --font-family: ariel;
     --color: white;
 }
+body[data-theme="model-red"] .nav-logo img {
+  filter: hue-rotate(180deg) saturate(2) brightness(0.5);
+}
