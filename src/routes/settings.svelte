@@ -76,7 +76,7 @@
         <option value="default">Amethyst</option>
         <option value="null">Light Mode</option>
         <option value="dark-mode">Dark Mode</option> <!-- HOT DARK MODE-->
-        <option value="model-red"><Product Red</option>
+        <option value="model-red">Product Red</option>
     </select>
 </div>
 <!-- <Ad client="" slot=""></Ad> -->
