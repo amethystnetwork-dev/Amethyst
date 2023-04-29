@@ -28,7 +28,7 @@ body[data-theme="dark-mode"] {
     --font-family: ariel;
 }
 body[data-theme="model-red"] {
-    --background:linear-gradient(to right, #342b36, #000000);
+    --background:linear-gradient(to right, #3a2727, #000000);
     --theme-i: #b80000;
     --sidebar-bg: #1d1d1d;
     --dark-text: red;
