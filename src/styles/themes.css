@@ -11,3 +11,17 @@ body[data-theme="default"] {
     --button: #F08FFC;
     --button-hover: #F080AC;
 }
+
+body[data-theme="dark-mode"] {
+    --background: #121212;
+    --theme-i: #6b00b6;
+    --sidebar-bg: #1d1d1d;
+    --dark-text: white;
+    --color-one: #9c38ff;
+    --color-two: #c48aff;
+    --white: #242424;
+    --box: #353535;
+    --header: #824dff;
+    --button: #F08FFC;
+    --button-hover: #F080AC;
+}
