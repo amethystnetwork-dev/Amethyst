@@ -1,3 +1,4 @@
+/*Bareclient code*/
 import { createBareClient } from "@tomphttp/bare-client";
 
 async function init() {
