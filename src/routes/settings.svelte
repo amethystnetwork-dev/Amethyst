@@ -125,4 +125,7 @@
     margin: 50px 0;
     padding: 0 20px; 
   }
+  .settings::-webkit-scrollbar { 
+    width: 0;
+    background: transparent;
 </style>
