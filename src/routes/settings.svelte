@@ -118,7 +118,11 @@
         font-family: "Poppins";
         border-radius:5px;
     }
-    .settings {
-        overflow: auto;
-    }
+
+  .settings {
+    overflow: auto;
+    height: calc(100vh - 120px);
+    margin: 50px 0;
+    padding: 0 20px; 
+  }
 </style>
