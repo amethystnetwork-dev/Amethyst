@@ -74,8 +74,8 @@
     <h2 class="settings-head2">Theme</h2>
     <select class="dropdown" on:change={changeTheme} bind:value={themeSetting}>
         <option value="default">Amethyst</option>
-        <option value="null">No Theme</option>
-        <option value="dark-mode">Dark Amethyst</option>
+        <option value="null">Light Mode</option>
+        <option value="dark-mode">Dark Mode</option> <!-- HOT DARK MODE-->
     </select>
 </div>
 <!-- <Ad client="" slot=""></Ad> -->
