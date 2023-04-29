@@ -1,5 +1,8 @@
 import { createBareClient } from "@tomphttp/bare-client";
 
-const client = await createBareClient(new URL("/bare/", window.location));
+async function init() {
+  const client = await createBareClient(new URL("/bare/", window.location));
+  return client;
+}
 
-export default client;
+export default init();
