@@ -14,7 +14,7 @@ body[data-theme="default"] {
 }
 
 body[data-theme="dark-mode"] {
-    --background: #121212;
+    --background:linear-gradient(to right, #db5dfd, #bf83fb);
     --theme-i: #6b00b6;
     --sidebar-bg: #1d1d1d;
     --dark-text: white;
