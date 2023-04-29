@@ -10,6 +10,7 @@ body[data-theme="default"] {
     --header: #3f12f3;
     --button: #F08FFC;
     --button-hover: #F080AC;
+    --font-family: ariel;
 }
 
 body[data-theme="dark-mode"] {
@@ -24,4 +25,5 @@ body[data-theme="dark-mode"] {
     --header: #824dff;
     --button: #F08FFC;
     --button-hover: #F080AC;
+    --font-family: ariel;
 }
