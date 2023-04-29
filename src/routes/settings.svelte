@@ -75,7 +75,7 @@
     <select class="dropdown" on:change={changeTheme} bind:value={themeSetting}>
         <option value="default">Amethyst</option>
         <option value="null">No Theme</option>
-        <option value="dark">Dark Amethyst</option>
+        <option value="dark-mode">Dark Amethyst</option>
     </select>
 </div>
 <!-- <Ad client="" slot=""></Ad> -->
