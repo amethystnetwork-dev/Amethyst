@@ -42,6 +42,5 @@
 
   img:hover {
     transform: scale(1.2);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 </style>
