@@ -20,6 +20,7 @@
         <Link to="/gs" {getProps}><span>Games</span></Link>
         <Link to="/credits" {getProps}><span>Credits</span></Link>
         <Link to="/settings" {getProps}><span>Settings</span></Link>
+        <Link to="/support" {getProps}><span>Support Us</span></Link>
     </div>
 </nav>
 
