@@ -54,6 +54,7 @@
     <input
         placeholder="Enter a title"
         bind:value={$tabTitle}
+        class="title"
     >
     <input type="url"
         placeholder="Enter a icon URL"
@@ -83,13 +84,14 @@
 
 <style>
     .button {
-        background-color:var(--button);
-        border-radius:5px;
+        background-color: var(--button);
+        border-radius: 5px;
         border: none !important;
-        width:100px;
-        margin-bottom:5px;
-        height:40px;
+        width: 100px;
+        margin-bottom: 5px;
+        height :40px;
     }
+
     .button:hover,
     .button:focus {
         border-radius: 5px;
@@ -100,35 +102,55 @@
         font-family: "Poppins";
         font-size: 36px;
         color: var(--header);
-        padding:0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
         margin: 0px 0px 0px 0px;
     }
+
     .settings-head2 {
         font-family: "Poppins";
         font-size: 24px;
         color: var(--header);
     }
+
     .dropdown {
         font-family: "Poppins";
         background-color: var(--button);
         width: 150px;
-        height:30px;
-        border-radius:5px;
-        border:none;
-    }
-    option {
-        font-family: "Poppins";
-        border-radius:5px;
+        height: 30px;
+        border-radius: 5px;
+        border: none;
     }
 
-  .settings {
-    overflow: auto;
-    height: calc(100vh - 120px);
-    margin: 50px 0;
-    padding: 0 20px; 
-  }
-  .settings::-webkit-scrollbar { 
-    width: 0;
-    background: transparent;
-  }
+    option {
+        font-family: "Poppins";
+        border-radius: 5px;
+    }
+
+    .settings {
+        overflow: auto;
+        height: calc(100vh - 120px);
+        margin: 50px 0;
+        padding: 0 20px; 
+    }
+
+    .settings::-webkit-scrollbar { 
+        width: 0;
+        background: transparent;
+    }
+
+    input {
+        background-color: var(--button);
+        width: 150px;
+        height: 30px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    input::placeholder {
+        font-family: "Poppins";
+    }
+
+    .title {
+        margin-bottom: 5px;
+    }
 </style>
