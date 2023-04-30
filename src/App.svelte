@@ -7,6 +7,7 @@
   import Games from "./routes/games.svelte";
   import Credits from "./routes/credits.svelte";
   import Settings from "./routes/settings.svelte";
+  import Support from "./routes/support.svelte";
 
   import NotFound from "./routes/NotFound.svelte";
 
@@ -24,5 +25,6 @@
   <Route path="/gs/"><Games on:navhide={h} /></Route>
   <Route path="/credits/"><Credits /></Route>
   <Route path="/settings/"><Settings /></Route>
+  <Route path="/support/"><Support /></Route>
   <Route path="*"><NotFound /></Route>
 </Router>
