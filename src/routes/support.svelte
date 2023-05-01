@@ -5,7 +5,7 @@
 
 <div class="support-container">
     <h1 class="support-head">Support Us</h1>
-    <p class="support-desc">Help us! This will go towards alleviating server and domain costs.</p>
+    <h1 class="support-desc">Help us! This will go towards alleviating server and domain costs.</h1>
   <div class="support-buttons">
     <a href="https://www.buymeacoffee.com/amethystnetwork" target="_blank" rel="noreferrer" class="bmcb-btn"><img src="/img/bmac.png" /></a>
     <a href="https://discord.gg/fzrmxgu2NR" target="_blank" rel="nonreferrer" class="join-discord-btn"><img src="/img/discord.png" /></a>
@@ -28,9 +28,9 @@
   .support-head{
     color: var(--header);
   }
-  
- .p{
+  .support-desc{
     color: var(--header);
+    font-size: 20px;
   }
   .join-discord-btn {
     margin-top: 40px;
