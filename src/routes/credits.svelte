@@ -19,6 +19,6 @@
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     color: var(--header);
-    font-size: 20px;
+    font-size: 15px;
   }  
 </style>
