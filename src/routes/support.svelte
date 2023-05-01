@@ -41,7 +41,7 @@
     height: auto;
   }
   .bmcb-btn img{
-    width: 60%;
+    width: 75%;
   }
   img {
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
