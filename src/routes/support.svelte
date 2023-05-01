@@ -28,7 +28,10 @@
   .support-head{
     color: var(--header);
   }
-
+  
+ .p{
+    color: var(--header);
+  }
   .join-discord-btn {
     margin-top: 40px;
   }
