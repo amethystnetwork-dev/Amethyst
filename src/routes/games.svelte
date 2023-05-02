@@ -33,9 +33,7 @@
     <div class="header-container">
       <h1 class="head">Games</h1>
     </div>
-    <!-- Add a wrapper element around the headings and game items with the style rule -->
     <div style="overflow: auto;">
-      <h2>Titles</h2>
       <div id="gs-container">
         {#await getGames()}
           <h3>Loading</h3>
