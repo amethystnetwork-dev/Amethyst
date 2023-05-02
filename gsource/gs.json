@@ -28,5 +28,10 @@
     "img": "/img/gs/cookie-clicker.png",
     "location": "https://orteil.dashnet.org/cookieclicker/",
     "title": "Cookie Clicker"
+  },
+  {
+    "img": "/img/gs/mc.png",
+    "location": "https://eaglercraft.ru/mc/1.8.8/",
+    "title": "Eaglercraft"
   }
 ]
