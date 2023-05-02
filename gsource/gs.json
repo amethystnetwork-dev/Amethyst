@@ -35,8 +35,108 @@
     "title": "Eaglercraft"
   },
   {
-    "img": "/img/gs/osuimg.png",
-    "location": "https://raw.githack.com/3kh0/3kh0-assets/main/osu!/index.html",
-    "title": "Osu!"
+    "img": "/img/gs/1.png",
+    "location": "https://raw.githack.com/3kh0/3kh0-assets/main/1/index.html",
+    "title": "One"
+  },
+    {
+    "img": "/img/gs/2048.png",
+    "location": "https://raw.githack.com/3kh0/3kh0-assets/main/2048/index.html",
+    "title": "2048"
+  },
+    {
+    "img": "/img/gs/10mtd.png",
+    "location": "https://raw.githack.com/3kh0/3kh0-assets/main/10-minutes-till-dawn/index.html",
+    "title": "10 minutes till dawn"
+  },
+    {
+    "img": "/img/gs/100ng.png",
+    "location": "https://raw.githack.com/3kh0/3kh0-assets/main/100ng/index.html",
+    "title": "100ng"
+  },
+    {
+    "img": "/img/gs/1v1space.png",
+    "location": "https://raw.githack.com/3kh0/3kh0-assets/main/1v1space/index.html",
+    "title": "1v1space"
+  },
+    {
+    "img": "/img/gs/99balls.png",
+    "location": "https://raw.githack.com/3kh0/3kh0-assets/main/99balls/index.html",
+    "title": "99balls"
+  },
+    {
+    "img": "/img/gs/DogeMiner.png",
+    "location": "https://raw.githack.com/3kh0/3kh0-assets/main/DogeMiner/index.html",
+    "title": "DogeMiner"
+  },
+    {
+    "img": "/img/gs/Dogeminer2.png",
+    "location": "https://raw.githack.com/3kh0/3kh0-assets/main/Dogeminer2/index.html",
+    "title": "Doge miner 2"
+  },
+    {
+    "img": "/img/gs/HexGL.png",
+    "location": "https://raw.githack.com/3kh0/3kh0-assets/main/HexGL/index.html",
+    "title": "HexGL"
+  },
+    {
+    "img": "/img/gs/OfflineParadise.png",
+    "location": "https://raw.githack.com/3kh0/3kh0-assets/main/OfflineParadise/index.html",
+    "title": "Offline Paradise"
+  },
+    {
+    "img": "/img/gs/Rocket-League.png",
+    "location": "https://raw.githack.com/3kh0/3kh0-assets/main/Rocket-League/index.html",
+    "title": "Rocket League"
+  },
+    {
+    "img": "/img/gs/Run2.png",
+    "location": "https://raw.githack.com/3kh0/3kh0-assets/main/Run 2/index.html",
+    "title": "Run 2"
+  },
+    {
+    "img": "/img/gs/Stickman-Survival.png",
+    "location": "https://raw.githack.com/3kh0/3kh0-assets/main/Stickman-Survival/index.html",
+    "title": "Stickman Survival"
+  },
+    {
+    "img": "/img/gs/a-dance-of-fire-and-ice.png",
+    "location": "https://raw.githack.com/3kh0/3kh0-assets/main/a-dance-of-fire-and-ice/index.html",
+    "title": "ADOFI"
+  },
+    {
+    "img": "/img/gs/adarkroom.png",
+    "location": "https://raw.githack.com/3kh0/3kh0-assets/main/adarkroom/index.html",
+    "title": "a dark room"
+  },
+    {
+    "img": "/img/gs/among-us.png",
+    "location": "https://raw.githack.com/3kh0/3kh0-assets/main/among-us/index.html",
+    "title": "among us"
+  },
+    {
+    "img": "/img/gs/angry-sharks.png",
+    "location": "https://raw.githack.com/3kh0/3kh0-assets/main/angry-sharks/index.html",
+    "title": "angry sharks"
+  },
+    {
+    "img": "/img/gs/backrooms-2d.png",
+    "location": "https://raw.githack.com/3kh0/3kh0-assets/main/backrooms-2d/index.html",
+    "title": "backrooms 2d"
+  },
+    {
+    "img": "/img/gs/backrooms.png",
+    "location": "https://raw.githack.com/3kh0/3kh0-assets/main/backrooms/index.html",
+    "title": "backrooms"
+  },
+    {
+    "img": "/img/gs/baldis-basics.png",
+    "location": "https://raw.githack.com/3kh0/3kh0-assets/main/baldis-basics/index.html",
+    "title": "baldis basics"
+  },
+    {
+    "img": "/img/gs/bitlife.png",
+    "location": "https://raw.githack.com/3kh0/3kh0-assets/main/bitlife/index.html",
+    "title": "bitlife"
   }
 ]
