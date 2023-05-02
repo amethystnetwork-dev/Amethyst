@@ -33,22 +33,26 @@
     <div class="header-container">
       <h1 class="head">Games</h1>
     </div>
-    <div id="gs-container" style="overflow: auto;">
-      {#await getGames()}
-        <h3>Loading</h3>
-      {:then json}
-        {#each json as i}
-          <GameItem
-            title={i.title}
-            image={i.img}
-            location={i.location}
-            click={loadGameFrame}
-          />
-        {/each}
-        {:catch err} 
-          <h3>Failed to load</h3>
-          <p>{err}</p>
-      {/await}
+    <!-- Add a wrapper element around the headings and game items with the style rule -->
+    <div style="overflow: auto;">
+      <h2>Titles</h2>
+      <div id="gs-container">
+        {#await getGames()}
+          <h3>Loading</h3>
+        {:then json}
+          {#each json as i}
+            <GameItem
+              title={i.title}
+              image={i.img}
+              location={i.location}
+              click={loadGameFrame}
+            />
+          {/each}
+          {:catch err} 
+            <h3>Failed to load</h3>
+            <p>{err}</p>
+        {/await}
+      </div>
     </div>
   </div>
   <!-- <Ad client="" slot=""></Ad> -->
