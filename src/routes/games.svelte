@@ -33,7 +33,7 @@
     <div class="header-container">
       <h1 class="head">Games</h1>
     </div>
-    <div id="gs-container">
+    <div id="gs-container" style="overflow: auto;">
       {#await getGames()}
         <h3>Loading</h3>
       {:then json}
