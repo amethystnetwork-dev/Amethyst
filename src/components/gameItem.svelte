@@ -39,7 +39,7 @@
         font-family: "Montserrat", sans-serif;
         color: white;
         text-align: center;
-        margin-top: 50px;
+        margin-top: 20px;
         margin-left: 100px;
         position: absolute;
         font-size: 30px;
