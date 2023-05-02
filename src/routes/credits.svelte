@@ -10,6 +10,7 @@
     <h1>IDontCodee - Amethyst Network</h1>
     <h1><a href="https://github.com/Vortexzzzz" target="_blank" rel="noreferrer">Vortex</a> - Amazing CSS styling</h1>
     <h1><a href="https://github.com/bobsterlarry">bobsterlarry</a> - Helper and Owner of Amethyst Network</h1>
+    <h1><a href="https://github.com/3kh0">3hk0</a> - Games </h1>
   </div>
 </div>
 
