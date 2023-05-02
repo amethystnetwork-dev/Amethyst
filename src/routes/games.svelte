@@ -24,6 +24,40 @@
     const json = await res.json();
     return json;
   }
+
+  function lazyLoadImages() {
+    const images = document.querySelectorAll(".gs-img");
+    const options = {
+      rootMargin: "10px 0px",
+    };
+
+    function preloadImage(img) {
+      const src = img.getAttribute("data-src");
+      if (!src) return;
+      img.src = src;
+      img.removeAttribute("data-src");
+      img.setAttribute("data-loaded", true);
+    }
+
+    function handleImg(entries, observer) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          preloadImage(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }
+
+    const observer = new IntersectionObserver(handleImg, options);
+
+    images.forEach((image) => {
+      observer.observe(image);
+    });
+  }
+
+  window.onload = function() {
+    lazyLoadImages();
+  }
 </script>
 
 <Head localTitle="Amethyst | Games"></Head>
@@ -33,7 +67,7 @@
     <div class="header-container">
       <h1 class="head">Games</h1>
     </div>
-    <div id="gs-container">
+    <div id="gs-container" style="max-height: 400px; overflow: auto;">
       {#await getGames()}
         <h3>Loading</h3>
       {:then json}
@@ -43,6 +77,9 @@
             image={i.img}
             location={i.location}
             click={loadGameFrame}
+            src={i.img}
+            data-src={i.img}
+            data-loaded={false}
           />
         {/each}
         {:catch err} 
@@ -55,3 +92,56 @@
 {:else}
   <Frame src={frameSrc} on:exit={() => showingFrame = false}></Frame>
 {/if}
+
+<style>
+  .box {
+    width: 350px;
+    height: 100px;
+    background-color: var(--box);
+    border-radius: 10px;
+    display: flex;
+    float: left;
+    margin-left: 30px;
+    box-shadow: var(--box) 2px;
+    margin-bottom: 5px;
+  }
+  .gs-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  .gs-img:hover {
+    transition: 1s;
+    transform: scale(1.3);
+    z-index: 2;
+  }
+  .gs-box-header {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    text-align: center;
+    position: absolute;
+    font-size: 30px;
+    width: 100%;
+    margin: auto;
+    top: 40%;
+    transform: translateY(-50%);
+  }
+  .gs-box-header:hover {
+    transition: 1s;
+    transform: scale(1.1);
+    z-index: 2;
+  }
+  .b2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .gs-box-button:hover {
+    color: black;
+  }
+</style>
