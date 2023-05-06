@@ -130,12 +130,19 @@
         overflow: auto;
         height: calc(100vh - 120px);
         margin: 50px 0;
-        padding: 0 20px; 
+        padding: 0 20px;
+        width: 97%;
     }
 
-    .settings::-webkit-scrollbar { 
-        width: 0;
-        background: transparent;
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--theme-i);
+        border-radius: 5px;
+    }
+    ::-webkit-scrollbar-track {
+        background-color: var(--dark-text);
     }
 
     input {

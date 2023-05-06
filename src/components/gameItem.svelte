@@ -39,8 +39,8 @@
         font-family: "Montserrat", sans-serif;
         color: white;
         text-align: center;
-        margin-left: 100px;
-        position: absolute;
+        margin-left: 10px;
+        position: relative;
         font-size: 30px;
     }
     .gs-box-header:hover {
