@@ -67,7 +67,7 @@
     <div class="header-container">
       <h1 class="head">Games</h1>
     </div>
-    <div id="gs-container" style="max-height: 400px; overflow: auto;">
+    <div id="gs-container" style="max-height: 400px; overflow: auto; margin-left: 5%;">
       {#await getGames()}
         <h3>Loading</h3>
       {:then json}
@@ -121,13 +121,14 @@
   .gs-box-header {
     font-family: "Montserrat", sans-serif;
     color: white;
-    text-align: center;
-    position: absolute;
+    text-align: left;
     font-size: 30px;
     width: 100%;
     margin: auto;
     top: 40%;
     transform: translateY(-50%);
+    position: relative;
+    margin-left: 10px;
   }
   .gs-box-header:hover {
     transition: 1s;
@@ -144,5 +145,15 @@
   }
   .gs-box-button:hover {
     color: black;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--theme-i);
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: var(--dark-text);
   }
 </style>

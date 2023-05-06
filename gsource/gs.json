@@ -11,7 +11,7 @@
   },
   {
     "img": "/img/gs/vex6.jpeg",
-    "location": "/cdn/",
+    "location": "https://raw.githack.com/3kh0/3kh0-assets/main/vex6/index.html",
     "title": "Vex 6"
   },
   {
@@ -107,36 +107,36 @@
     {
     "img": "/img/gs/adarkroom.png",
     "location": "https://raw.githack.com/3kh0/3kh0-assets/main/adarkroom/index.html",
-    "title": "a dark room"
+    "title": "A Dark Room"
   },
     {
     "img": "/img/gs/among-us.png",
     "location": "https://raw.githack.com/3kh0/3kh0-assets/main/among-us/index.html",
-    "title": "among us"
+    "title": "Among Us"
   },
     {
     "img": "/img/gs/angry-sharks.png",
     "location": "https://raw.githack.com/3kh0/3kh0-assets/main/angry-sharks/index.html",
-    "title": "angry sharks"
+    "title": "Angry Sharks"
   },
     {
     "img": "/img/gs/backrooms-2d.png",
     "location": "https://raw.githack.com/3kh0/3kh0-assets/main/backrooms-2d/index.html",
-    "title": "backrooms 2d"
+    "title": "Backrooms 2D"
   },
     {
     "img": "/img/gs/backrooms.png",
     "location": "https://raw.githack.com/3kh0/3kh0-assets/main/backrooms/index.html",
-    "title": "backrooms"
+    "title": "Backrooms"
   },
     {
     "img": "/img/gs/baldis-basics.png",
     "location": "https://raw.githack.com/3kh0/3kh0-assets/main/baldis-basics/index.html",
-    "title": "baldis basics"
+    "title": "Baldi's Basics"
   },
     {
     "img": "/img/gs/bitlife.png",
     "location": "https://raw.githack.com/3kh0/3kh0-assets/main/bitlife/index.html",
-    "title": "bitlife"
+    "title": "BitLife"
   }
 ]

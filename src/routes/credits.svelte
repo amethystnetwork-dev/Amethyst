@@ -8,6 +8,7 @@
   <div class="credits-container">
     <h1><a href="https://github.com/oHeckGage" target="_blank" rel="noreferrer" class="head">Gage</a> - Made this project possible</h1>
     <h1>IDontCodee - Amethyst Network</h1>
+    <h1><a href="https://github.com/mdoryammilwalrus" target="_blank" rel="noreferrer" class="head">mdoryammilwalrus</a> - Most of the code</h1>
     <h1><a href="https://github.com/Vortexzzzz" target="_blank" rel="noreferrer" class="head">Vortex</a> - Amazing CSS styling</h1>
     <h1><a href="https://github.com/bobsterlarry" class="head">bobsterlarry</a> - Helper and Owner of Amethyst Network</h1>
     <h1><a href="https://github.com/3kh0" class="head">3hk0</a> - Games </h1>

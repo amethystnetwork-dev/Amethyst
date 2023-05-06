@@ -18,7 +18,6 @@
     display: flex;
     flex-direction: column;
   }
-
   .support-buttons {
     display: flex;
     flex-direction: column;
@@ -35,19 +34,11 @@
   .join-discord-btn {
     margin-top: 40px;
   }
-
-  .join-discord-btn img {
-    width: 65%;
-    height: auto;
-  }
-  .bmcb-btn img{
-    width: 75%;
-  }
   img {
+    width: 75%;
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
     border: none;
   }
-
   img:hover {
     transform: scale(1.2);
   }
